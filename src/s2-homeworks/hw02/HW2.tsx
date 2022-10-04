@@ -19,9 +19,9 @@ import s2 from '../../s1-main/App.module.css'
 // types
 export type AffairPriorityType = any // need to fix any
 export type AffairType = {
-    _id: any // need to fix any
-    name: any // need to fix any
-    priority: AffairPriorityType
+    _id: number,
+    name: string,
+    priority: AffairPriorityType,
 }
 export type FilterType = 'all' | AffairPriorityType
 
@@ -35,24 +35,38 @@ const defaultAffairs: any = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
+export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => { // need to fix any
+    if (filter === 'low'){
+        return (
+            affairs.filter((el: { priority: AffairPriorityType }) => el.priority === 'low')
+        )
+    }
+    if (filter === 'high') {
+        return (
+            affairs.filter((el: { priority: AffairPriorityType }) => el.priority === 'high')
+        )
+    }
+    if (filter === 'middle') {
+        return (
+            affairs.filter((el: { priority: AffairPriorityType }) => el.priority === 'middle')
+        )
+    } else {
+        return affairs;
+    }
 
-
-    return affairs // need to fix
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-
-    return affairs // need to fix
+export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need to fix any
+    return affairs.filter((el: {_id: number}) => el._id !== _id);
 }
+
 
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
+    const [affairs, setAffairs] = useState<AffairType[]>(defaultAffairs) // need to fix any
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: any) => { // need to fix any
-        // need to fix
-    }
+    const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
+
 
     return (
         <div id={'hw2'}>
