@@ -32,4 +32,4 @@ const Message = (props: MessagePropsType) => {
     )
 }
 
-export default Message
+export default Message;
