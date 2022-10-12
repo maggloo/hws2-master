@@ -22,20 +22,10 @@
     background-color: #F5F7FB;
     color: black;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 10px 10px 10px 0px;
     position: relative;
 }
 
-.friendText:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 98%;
-    display: block;
-    width: 30px;
-    height: 25px;
-    background: radial-gradient(55px at top left, transparent 49%, #F5F7FB 51%) no-repeat right bottom;
-}
 
 .friendName {
     font-weight: bold;
