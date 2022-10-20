@@ -34,17 +34,14 @@
 
 .default:hover {
     background-color: rgba(0, 128, 255, 1);
-    width: 167px;
 }
 
 .red:hover {
     background-color: rgba(255, 26, 71, 1);
-    width: 167px;
 }
 
 .secondary:hover {
     background-color: rgba(229, 240, 250, 1);
-    width: 167px;
 }
 
 

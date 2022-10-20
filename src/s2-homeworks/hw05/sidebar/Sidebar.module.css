@@ -1,10 +1,8 @@
 .sidebar {
     height: 100%;
-    width: 0;
     position: fixed;
     z-index: 2;
-    top: 0;
-    left: 0;
+    transform: translate(-300px);
     overflow-x: hidden;
     background-color: white;
     padding-top: 60px;
@@ -13,6 +11,7 @@
 
 .sidebar.open {
     display: flex;
+    transform: translate(0);
     flex-direction: column;
     position: absolute;
     background-color: #d3faff;
@@ -61,11 +60,11 @@
     width: 0;
     background-color: white;
     border: none;
-    position: absolute;
-    top: 20px;
-    right: 50px;
-    margin-left: 50px;
 }
 
 .close img {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
 }

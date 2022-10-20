@@ -3,6 +3,7 @@
     align-items: flex-end;
     justify-content: right;
     position: relative;
+
 }
 
 .imageAndText {
@@ -11,6 +12,7 @@
     flex-direction: row-reverse;
     padding: 10px;
     gap: 15px;
+    max-width: 400px;
 }
 
 .imageAndText img {
@@ -35,7 +37,9 @@
 }
 
 .messageText {
-
+    text-align: left;
+    white-space: pre-line;
+    overflow-wrap: break-word;
 }
 
 .time {

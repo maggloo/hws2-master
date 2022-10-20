@@ -9,6 +9,7 @@
     align-items: flex-end;
     padding: 10px;
     gap: 15px;
+    max-width: 400px;
 }
 
 .friendImageAndText img {
@@ -32,7 +33,9 @@
 }
 
 .friendMessageText {
-
+    text-align: left;
+    white-space: pre-line;
+    overflow-wrap: break-word;
 }
 
 .friendTime {

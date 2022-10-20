@@ -8,15 +8,19 @@
 }
 
 .textarea {
-    display: inline-block;
-    min-height: 40px;
-    max-height: 40px;
+    overflow: hidden;
+    max-height: 60px;
+    resize: none;
     width: 60%;
     max-width: 60%;
     min-width: 60%;
     border-radius: 15px;
     background-color: #f5f7fb;
-    padding: 5px;
+    padding: 10px;
+}
+
+.textarea:focus {
+    outline: 1px solid #aec6dd;
 }
 
 .button {
@@ -26,11 +30,13 @@
     border: none;
     color: white;
     background-color: #0066cc;
+    cursor: pointer;
 }
 
 .button:hover {
-
+    background-color: rgba(0, 128, 255, 1);
 }
-.button:active {
 
+.button:active {
+    background-color: rgba(0, 89, 178, 1);
 }
