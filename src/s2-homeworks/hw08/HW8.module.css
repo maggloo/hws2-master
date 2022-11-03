@@ -1,23 +1,47 @@
 .item {
 }
 
+.item td {
+    padding: 8px;
+    border-bottom: #E5E5E5 solid 1px;
+}
+
 .item:last-of-type {
+    border-bottom: white solid 2px;
 }
 
 .users {
+    width: 100%;
+    margin: 10px 0;
+    border-collapse: collapse;
 }
 
 .buttonsContainer {
+    align-self: flex-end;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
 }
 
 .thead {
+    background-color: #E5E5E5;
+    font-weight: bold;
+}
+
+.thead td {
+    padding: 8px;
+
 }
 
 .nameCol {
+    height: 36px;
+    width: 50%;
+    border-radius: 5px 0 0 5px;
 }
 
 .ageCol {
+    border-radius: 0 5px 5px 0;
 }
