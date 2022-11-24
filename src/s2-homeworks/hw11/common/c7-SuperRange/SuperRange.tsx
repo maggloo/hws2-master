@@ -8,8 +8,12 @@ const SuperRange: React.FC<SliderProps> = (props) => {
                 color: 'rgba(0, 204, 34, 1)',
                 width: 200,
                 '& .MuiSlider-thumb': {
-                    backgroundColor: '#fff',
-                    border: '5px solid currentColor',
+                    backgroundColor: 'currentColor',
+                    border: '5px solid white',
+                    outline: 'solid 2px currentColor',
+                    '&:before': {
+                        display: 'none',
+                    },
                     '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
                         boxShadow: 'inherit',
                     },
