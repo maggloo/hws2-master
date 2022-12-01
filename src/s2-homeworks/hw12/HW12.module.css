@@ -19,5 +19,10 @@ html {
 }
 
 .select {
+    background-color: transparent;
+    color: var(--color);
+}
 
+.select option {
+    color: black;
 }
