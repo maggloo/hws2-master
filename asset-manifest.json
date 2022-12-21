@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hws2-master/static/css/main.2f51d9b5.css",
-    "main.js": "/hws2-master/static/js/main.20256c71.js",
+    "main.js": "/hws2-master/static/js/main.1d7102c5.js",
     "static/js/787.66cb4309.chunk.js": "/hws2-master/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/hws2-master/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/hws2-master/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
@@ -19,11 +19,11 @@
     "static/media/angle-down-svgrepo-com.svg": "/hws2-master/static/media/angle-down-svgrepo-com.680710e5852c8f6fcaab2442c6bcc2b8.svg",
     "static/media/angle-up-svgrepo-com.svg": "/hws2-master/static/media/angle-up-svgrepo-com.3823717b44bfc431fc253e7e5bc33b4e.svg",
     "main.2f51d9b5.css.map": "/hws2-master/static/css/main.2f51d9b5.css.map",
-    "main.20256c71.js.map": "/hws2-master/static/js/main.20256c71.js.map",
+    "main.1d7102c5.js.map": "/hws2-master/static/js/main.1d7102c5.js.map",
     "787.66cb4309.chunk.js.map": "/hws2-master/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f51d9b5.css",
-    "static/js/main.20256c71.js"
+    "static/js/main.1d7102c5.js"
   ]
 }
