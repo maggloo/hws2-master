@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hws2-master/static/css/main.a44859d8.css",
-    "main.js": "/hws2-master/static/js/main.b5c1501e.js",
+    "main.css": "/hws2-master/static/css/main.2f51d9b5.css",
+    "main.js": "/hws2-master/static/js/main.bd0a4b3a.js",
     "static/js/787.66cb4309.chunk.js": "/hws2-master/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/hws2-master/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/hws2-master/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
@@ -15,12 +15,15 @@
     "static/media/checked.svg": "/hws2-master/static/media/checked.b75ca55e8759862b4083.svg",
     "index.html": "/hws2-master/index.html",
     "static/media/burger.svg": "/hws2-master/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
-    "main.a44859d8.css.map": "/hws2-master/static/css/main.a44859d8.css.map",
-    "main.b5c1501e.js.map": "/hws2-master/static/js/main.b5c1501e.js.map",
+    "static/media/sort-svgrepo-com.svg": "/hws2-master/static/media/sort-svgrepo-com.3cbc2a219b7b30db7dca077259a0cc46.svg",
+    "static/media/angle-down-svgrepo-com.svg": "/hws2-master/static/media/angle-down-svgrepo-com.680710e5852c8f6fcaab2442c6bcc2b8.svg",
+    "static/media/angle-up-svgrepo-com.svg": "/hws2-master/static/media/angle-up-svgrepo-com.3823717b44bfc431fc253e7e5bc33b4e.svg",
+    "main.2f51d9b5.css.map": "/hws2-master/static/css/main.2f51d9b5.css.map",
+    "main.bd0a4b3a.js.map": "/hws2-master/static/js/main.bd0a4b3a.js.map",
     "787.66cb4309.chunk.js.map": "/hws2-master/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a44859d8.css",
-    "static/js/main.b5c1501e.js"
+    "static/css/main.2f51d9b5.css",
+    "static/js/main.bd0a4b3a.js"
   ]
 }
