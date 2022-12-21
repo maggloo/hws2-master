@@ -41,18 +41,21 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    const sendQuery = (params: { page: string, count: string }) => {
+    const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 // делает студент
+
                 setLoading(false)
                 setTechs(res!.data.techs);
-                setSort('')
                 setTotalCount(res!.data.totalCount);
-                // сохранить пришедшие данные
-
-                //
+                /*else {
+                    let math = Math.ceil(totalCount / +params.count)
+                    setPage(math);
+                    setSearchParams({page: math.toString(), count: params.count})
+                    sendQuery({page: math.toString(),  count: params.count})
+                }*/
             })
     }
 
@@ -64,28 +67,21 @@ const HW15 = () => {
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
         setSort(newSort)
-        setPage(1) // при сортировке сбрасывать на 1 страницу
-        setTechs(techs.sort((a, b) => {
-            if (newSort === '') {
-                return -1
-            } else if (newSort === '0tech' || newSort === '0developer') {
-                return 0
-            } else if (newSort === '1tech' || newSort === '1developer') {
-                return -1
-            } else {
-                return 0
-            }
-        }));
+        setPage(1)
+        const params = {
+            page: page.toString(),
+            count: count.toString(),
+            sort: newSort,
+        };
+        sendQuery(params);
+        setSearchParams(params);
 
-        setSearchParams({page: '1', count: count.toString()})
-        //
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: params.page, count: params.count, sort: params.sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
