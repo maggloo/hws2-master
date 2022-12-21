@@ -2,26 +2,35 @@
     width: 50vw;
 }
 
-.developer {
-
+.developer{
 }
 
 .techHeader {
     width: 50vw;
+
 }
 
 .developerHeader {
-
 }
 
 .row {
     display: flex;
+    padding: 10px 10px;
+    border-top: 1px solid #E5E5E5;
 }
 
 .rowHeader {
     display: flex;
+    margin-top: 25px;
+    font-weight: bolder;
+    background-color: #E5E5E5;
+    padding: 10px 10px;
 }
 
 .loading {
-
+    background-image: url("../hw10/loader.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
 }

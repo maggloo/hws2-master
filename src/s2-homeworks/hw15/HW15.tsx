@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import s2 from '../../../../hws2-master_2/hws2-master/src/s1-main/App.module.css'
+import s2 from '../../s1-main/App.module.css'
 import s from './HW15.module.css'
 import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
@@ -41,12 +41,15 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    const sendQuery = (params: any) => {
+    const sendQuery = (params: { page: string, count: string }) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                setLoading(false)
+                setTechs(res!.data.techs);
+                setSort('')
+                setTotalCount(res!.data.totalCount);
                 // сохранить пришедшие данные
 
                 //
@@ -54,26 +57,29 @@ const HW15 = () => {
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
-
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        setPage(newPage);
+        setCount(newCount);
+        setSearchParams({page: newPage.toString(), count: newCount.toString()})
+        sendQuery({page: newPage.toString(), count: newCount.toString()})
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        setTechs(techs.sort((a, b) => {
+            if (newSort === '') {
+                return -1
+            } else if (newSort === '0tech' || newSort === '0developer') {
+                return 0
+            } else if (newSort === '1tech' || newSort === '1developer') {
+                return -1
+            } else {
+                return 0
+            }
+        }));
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        // setSearchParams(
-
+        setSearchParams({page: '1', count: count.toString()})
         //
     }
 
@@ -101,7 +107,7 @@ const HW15 = () => {
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <div id={'hw15-loading'} className={s.loading}></div>}
 
                 <SuperPagination
                     page={page}
@@ -112,12 +118,12 @@ const HW15 = () => {
 
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
-                        tech
+                        Tech
                         <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
                     </div>
 
                     <div className={s.developerHeader}>
-                        developer
+                        Developer
                         <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
                     </div>
                 </div>
